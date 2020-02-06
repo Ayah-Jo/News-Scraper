@@ -19,12 +19,6 @@ $ heroku create <enter app name>
 $ heroku addons:create mongolab
 $ git push heroku master
 ```
-## Walkthroughs
-### Scrape articles, save articles, open an article on a new tab and clear articles
-![GIF](https://github.com/Ayah-Jo/News-Scraper/tree/master)
-
-### Adding and remvoing notes to saved articles then clearing articles
-![GIF](https://github.com/Ayah-Jo/News-Scraper/tree/master)
 
 ## Programming/Scripting Languages
 ### Front-end
@@ -45,8 +39,5 @@ branch. Pull requests are warmly welcome.
 ## Links
 
 - Repository: https://github.com/Ayah-Jo/News-Scraper/tree/master
-- Deployed site: https://scraper-uft.herokuapp.com/
+- Deployed site: https://scraper312.herokuapp.com/
 
-## Licensing
-
-The code in this project is licensed under MIT license.
