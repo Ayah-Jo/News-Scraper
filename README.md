@@ -40,3 +40,7 @@ branch. Pull requests are warmly welcome.
 
 - Repository: https://github.com/Ayah-Jo/News-Scraper/tree/master
 - Deployed site: https://scraper312.herokuapp.com/
+<<<<<<< HEAD
+=======
+
+>>>>>>> a6481d8c9331fb331a9d9ba2d021477a4b218a1e
