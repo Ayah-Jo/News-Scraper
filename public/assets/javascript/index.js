@@ -1,5 +1,5 @@
 /* global bootbox */
-$(document).ready(function() {
+$(document).ready(function () {
   // Setting a reference to the article-container div where all the dynamic content will go
   // Adding event listeners to any dynamically generated "save article"
   // and "scrape new article" buttons
@@ -10,7 +10,7 @@ $(document).ready(function() {
 
   function initPage() {
     // Run an AJAX request for any unsaved headlines
-    $.get("/api/headlines?saved=false").then(function(data) {
+    $.get("/api/headlines?saved=false").then(function (data) {
 
       articleContainer.empty();
       // If we have headlines, render them to the page
@@ -67,11 +67,11 @@ $(document).ready(function() {
     var emptyAlert = $(
       [
         "<div class='alert alert-warning text-center'>",
-        "<h4>Uh Oh. Looks like we don't have any new articles.</h4>",
+        "<h4>Sorry! There are no saved articles.</h4>",
         "</div>",
         "<div class='card'>",
         "<div class='card-header text-center'>",
-        "<h3>What Would You Like To Do?</h3>",
+        "<h3>Would You Like to Browse Available Articles?</h3>",
         "</div>",
         "<div class='card-body text-center'>",
         "<h4><a class='scrape-new'>Try Scraping New Articles</a></h4>",
@@ -104,7 +104,7 @@ $(document).ready(function() {
       method: "PUT",
       url: "/api/headlines/" + articleToSave._id,
       data: articleToSave
-    }).then(function(data) {
+    }).then(function (data) {
       console.log(data)
       // If the data was saved successfully
       if (data) {
@@ -117,7 +117,7 @@ $(document).ready(function() {
 
   function handleArticleScrape() {
     // This function handles the user clicking any "scrape new article" buttons
-    $.get("/api/fetch").then(function(data) {
+    $.get("/api/fetch").then(function (data) {
       // If we are able to successfully scrape the NYTIMES and compare the articles to those
       // already in our collection, re render the articles on the page
       // and let the user know how many unique articles we were able to save
@@ -130,7 +130,7 @@ $(document).ready(function() {
   }
 
   function handleArticleClear() {
-    $.get("api/clear").then(function(data) {
+    $.get("api/clear").then(function (data) {
       console.log(data)
       articleContainer.empty();
       // initPage();
